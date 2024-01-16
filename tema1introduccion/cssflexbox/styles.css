@@ -7,10 +7,17 @@ body{
     display: flex;
     background-color: lightcoral;
     padding: 20px;
+    width: 80%;
+    height: 600px;
     /* flex-direction: row;
     flex-wrap: wrap; */
     /*esta opción combina el flexdirection con el flex wrap*/
     flex-flow: row wrap;
+    justify-content:center;
+    /* con align items podemos centrar los elementos y al mismo tiempo modificar su expasion al 100%*/
+    align-items: center;
+    /* para ajustar los espacios que hay entre los elementos, lineas, etc utilizamos aligncontent*/
+    /* align-content:baseline ; */
 }
 
 .caja{
@@ -19,9 +26,31 @@ body{
     color: black;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
+    width: 200px;
+    height: 180px; 
+    line-height: 200px;
     text-align: center;
     margin: 5px;
+}
+
+.c1{
+    background:lightblue;
+    /* order: podemos cambiar el orden de los elementos*/
+    order: 3;
+    /*flexgrow: podemos hacer destacar ese elemento haciendo que se expanda un poco mas, es modificar el width*/ 
+    flex-grow: 1;
+    /*flexbasis: es lo mismo que poner un width practicamente*/
+    flex-basis: 50%;
+}
+
+.c2{
+background: lightgray;
+order:1;
+flex-grow: 1;
+}
+
+.c3{
+    background: lightgreen;
+    order:2;
+    flex-grow: 1;
 }
